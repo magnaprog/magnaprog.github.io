@@ -151,6 +151,78 @@
   </div>
 </section>
 
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Q-Learning Algorithm</h2>
+          <div class="content has-text-justified">
+            <p>
+              The Q-Learning algorithm is a model-free reinforcement learning technique used to find the optimal action-selection policy. It updates the Q-values of state-action pairs based on the received rewards, guiding the agent to learn effective strategies through exploration and exploitation.
+            </p>
+            <p>
+              The Q-value update rule is given by:
+              \[
+              Q(s, a) \leftarrow Q(s, a) + \alpha \left[ r + \gamma \max_{a'} Q(s', a') - Q(s, a) \right]
+              \]
+              where \( \alpha \) is the learning rate, \( \gamma \) is the discount factor, \( r \) is the reward, \( s \) is the current state, \( s' \) is the next state, \( a \) is the current action, and \( a' \) is the next action.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Approximate Q-Learning Algorithm</h2>
+          <div class="content has-text-justified">
+            <p>
+              Approximate Q-Learning extends Q-Learning by using function approximation to handle large state spaces. This approach leverages features of the states to approximate the Q-values, making it suitable for complex environments like the Capture The Flag Pacman game.
+            </p>
+            <p>
+              The Q-value update rule with function approximation is:
+              \[
+              Q(s, a; \theta) \leftarrow Q(s, a; \theta) + \alpha \left[ r + \gamma \max_{a'} Q(s', a'; \theta) - Q(s, a; \theta) \right]
+              \]
+              where \( \theta \) represents the parameters of the function approximator.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Proximal Policy Optimization (PPO) Algorithm</h2>
+          <div class="content has-text-justified">
+            <p>
+              Proximal Policy Optimization (PPO) is a reinforcement learning algorithm that optimizes the policy directly. It strikes a balance between exploration and exploitation by maintaining a probability ratio, which ensures stable and efficient learning. PPO is known for its simplicity and effectiveness in various RL tasks.
+            </p>
+            <p>
+              The PPO objective function is:
+              \[
+              L^{CLIP}(\theta) = \hat{\mathbb{E}}_t \left[ \min \left( r_t(\theta) \hat{A}_t, \text{clip}(r_t(\theta), 1 - \epsilon, 1 + \epsilon) \hat{A}_t \right) \right]
+              \]
+              where \( r_t(\theta) \) is the probability ratio, \( \hat{A}_t \) is the advantage estimate, and \( \epsilon \) is a hyperparameter that controls the clipping range.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="hero is-small section-3">
   <div class="hero-body">
     <div class="container">
