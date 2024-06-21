@@ -2,31 +2,29 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="Capture The Flag Pacman project using reinforcement learning and non-ML approaches for agent behavior.">
-  <meta property="og:title" content="Capture The Flag Pacman Project"/>
-  <meta property="og:description" content="Explore the development and implementation of a Capture The Flag variation of Pacman using reinforcement learning and non-ML approaches for agent behavior."/>
+  <meta name="description" content="Capture The Flag variation of Pacman using reinforcement learning algorithms.">
+  <meta property="og:title" content="Capture The Flag Pacman with Reinforcement Learning"/>
+  <meta property="og:description" content="Explore the implementation of reinforcement learning algorithms in a Capture The Flag variation of Pacman."/>
   <meta property="og:url" content="URL OF THE WEBSITE"/>
-  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image" content="static/images/your_banner_image.png" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
-  <meta name="twitter:title" content="Capture The Flag Pacman Project">
-  <meta name="twitter:description" content="Explore the development and implementation of a Capture The Flag variation of Pacman using reinforcement learning and non-ML approaches for agent behavior.">
+  <meta name="twitter:title" content="Capture The Flag Pacman with Reinforcement Learning">
+  <meta name="twitter:description" content="Explore the implementation of reinforcement learning algorithms in a Capture The Flag variation of Pacman.">
   <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="keywords" content="Reinforcement Learning, Proximal Policy Optimization, Approximate Q-Learning, Unity, Artificial Life, Computer Graphics, Pacman">
+  <meta name="keywords" content="Reinforcement Learning, Pacman, Capture The Flag, Artificial Intelligence, Game Development">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Capture The Flag Pacman Project</title>
+  <title>Capture The Flag(CTF) Pacman with Reinforcement Learning</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -34,47 +32,139 @@
   <script defer src="static/js/fontawesome.all.min.js"></script>
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
   <script src="static/js/index.js"></script>
 </head>
 <body>
 
 <section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Capture The Flag Pacman Project</h1>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://github.com/YOUR_GITHUB_PROFILE" target="_blank">Siddarth Chalasani</a><sup>*</sup>,</span>
-            <span class="author-block">
-              <a href="https://github.com/YOUR_GITHUB_PROFILE" target="_blank">Varun Kumar</a><sup>*</sup>,</span>
-            <span class="author-block">
-              <a href="https://github.com/YOUR_GITHUB_PROFILE" target="_blank">Kevin Lee</a></span>,
-            <span class="author-block">
-              <a href="https://github.com/YOUR_GITHUB_PROFILE" target="_blank">Yu-Hsin Weng</a></span>
-          </div>
+  <div class="video-wrapper header">
+    <div class="bg-overlay"></div>
 
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">UCLA<br>CS275, 2024</span>
-            <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-          </div>
-
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
           <div class="column has-text-centered">
-            <div class="publication-links">
-              <span class="link-block">
-                <a href="CS275_Report.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                  <span>Report</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://github.com/magnaprog/minicontest2" target="_blank" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fab fa-github"></i></span>
-                  <span>Code</span>
-                </a>
-              </span>
+            <h1 class="xtitle is-1 publication-title">Capture The Flag Pacman with Reinforcement Learning</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+				  Yu-Hsin Weng</span>
+              <span class="author-block">
+				  Kevin Lee</span>
+              <span class="author-block">
+				  Varun Kumar</span>
+              <span class="author-block">
+				  Siddarth Chalasani</span>
             </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><small>Instructed by Prof. Demetri Terzopoulos</small><br><br>University of California, Los Angeles<br><small>Department of Computer Science</small><br><br>CS275: Artificial Life for Computer Graphics and Vision, 2024</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="CS275_Report.pdf" target="_blank" class="external-link">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Report</span>
+                  </a>
+                </span>
+
+                <span class="link-block">
+                  <a href="static/pdfs/supplementary_material.pdf" target="_blank" class="external-link">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Supplementary</span>
+                  </a>
+                </span>
+
+                <span class="link-block">
+                  <a href="https://github.com/magnaprog/minicontest2" target="_blank" class="external-link">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/ARXIV_PAPER_ID" target="_blank" class="external-link">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="marquee-wrapper">
+      <div class="container">
+        <div class="marquee-block">
+          <div class="marquee-inner to-left">
+            <span>
+              <div class="marquee-item">
+                <img src="static/images/carousel1.jpg" alt="Pacman Gameplay"/>
+                <p class="text-white">Pacman Gameplay</p>
+              </div>
+              <div class="marquee-item">
+                <img src="static/images/carousel2.jpg" alt="Agent Training"/>
+                <p class="text-white">Agent Training</p>
+              </div>
+              <div class="marquee-item">
+                <img src="static/images/carousel3.jpg" alt="Reinforcement Learning"/>
+                <p class="text-white">Reinforcement Learning</p>
+              </div>
+              <div class="marquee-item">
+                <img src="static/images/carousel4.jpg" alt="Unity Integration"/>
+                <p class="text-white">Unity Integration</p>
+              </div>
+              <div class="marquee-item">
+                <img src="static/images/carousel5.jpg" alt="ONNX Models"/>
+                <p class="text-white">ONNX Models</p>
+              </div>
+            </span>
+            <span>
+              <div class="marquee-item">
+                <img src="static/images/carousel1.jpg" alt="Pacman Gameplay"/>
+                <p class="text-white">Pacman Gameplay</p>
+              </div>
+              <div class="marquee-item">
+                <img src="static/images/carousel2.jpg" alt="Agent Training"/>
+                <p class="text-white">Agent Training</p>
+              </div>
+              <div class="marquee-item">
+                <img src="static/images/carousel3.jpg" alt="Reinforcement Learning"/>
+                <p class="text-white">Reinforcement Learning</p>
+              </div>
+              <div class="marquee-item">
+                <img src="static/images/carousel4.jpg" alt="Unity Integration"/>
+                <p class="text-white">Unity Integration</p>
+              </div>
+              <div class="marquee-item">
+                <img src="static/images/carousel5.jpg" alt="ONNX Models"/>
+                <p class="text-white">ONNX Models</p>
+              </div>
+            </span>
           </div>
         </div>
       </div>
@@ -89,7 +179,7 @@
         <source src="static/videos/banner_video.mp4" type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        Experience the dynamic Capture The Flag variation of Pacman, where agents employ reinforcement learning strategies to outsmart their opponents.
+        Capture The Flag variation of Pacman using reinforcement learning algorithms like Q-Learning and PPO.
       </h2>
     </div>
   </div>
@@ -101,7 +191,9 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <p>This report presents the development and implementation of a Capture The Flag (CTF) variation of Pacman using both non-ML and ML approaches for agent behavior. The project involves the use of reinforcement learning (RL) algorithms such as Q-Learning and Proximal Policy Optimization (PPO) to enable adaptive agent strategies. This interdisciplinary approach integrates machine learning, game development, and animation concepts, making it highly relevant to the study of artificial life for computer graphics and vision.</p>
+          <p>
+            This report presents the development and implementation of a Capture The Flag (CTF) variation of Pacman using both non-ML and ML approaches for agent behavior. The project involves the use of reinforcement learning (RL) algorithms such as Q-Learning and Proximal Policy Optimization (PPO) to enable adaptive agent strategies. This interdisciplinary approach integrates machine learning, game development, and artificial life concepts, making it highly relevant to the study of artificial life for computer graphics and vision.
+          </p>
         </div>
       </div>
     </div>
@@ -112,26 +204,35 @@
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
-        <div class="item">
-          <img src="static/images/carousel1.jpg" alt="Pacman Gameplay"/>
-          <h2 class="subtitle has-text-centered">Pacman Gameplay</h2>
-        </div>
-        <div class="item">
-          <img src="static/images/carousel2.jpg" alt="Agent Training"/>
-          <h2 class="subtitle has-text-centered">Agent Training</h2>
-        </div>
-        <div class="item">
-          <img src="static/images/carousel3.jpg" alt="Reinforcement Learning"/>
-          <h2 class="subtitle has-text-centered">Reinforcement Learning</h2>
-        </div>
-        <div class="item">
-          <img src="static/images/carousel4.jpg" alt="Unity Integration"/>
-          <h2 class="subtitle has-text-centered">Unity Integration</h2>
-        </div>
-        <div class="item">
-          <img src="static/images/carousel5.jpg" alt="ONNX Models"/>
-          <h2 class="subtitle has-text-centered">ONNX Models</h2>
-        </div>
+       <div class="item">
+        <img src="static/images/carousel1.jpg" alt="Pacman Gameplay"/>
+        <h2 class="subtitle has-text-centered">
+          Pacman Gameplay
+        </h2>
+      </div>
+      <div class="item">
+        <img src="static/images/carousel2.jpg" alt="Agent Training"/>
+        <h2 class="subtitle has-text-centered">
+          Agent Training
+        </h2>
+      </div>
+      <div class="item">
+        <img src="static/images/carousel3.jpg" alt="Reinforcement Learning"/>
+        <h2 class="subtitle has-text-centered">
+          Reinforcement Learning
+        </h2>
+      </div>
+      <div class="item">
+        <img src="static/images/carousel4.jpg" alt="Unity Integration"/>
+        <h2 class="subtitle has-text-centered">
+          Unity Integration
+        </h2>
+      </div>
+      <div class="item">
+        <img src="static/images/carousel5.jpg" alt="ONNX Models"/>
+        <h2 class="subtitle has-text-centered">
+          ONNX Models
+        </h2>
       </div>
     </div>
   </div>
@@ -205,7 +306,7 @@
       <div class="column is-8">
         <div class="content">
           <p>
-            This project page presents our Capture The Flag Pacman project, developed as part of the CS275 course at UCLA. Our team utilized reinforcement learning algorithms to create adaptive agents that simulate complex behaviors in a dynamic environment.
+            This project page presents our Capture The Flag Pacman project, developed as part of the CS275 course at UCLA. Our team utilized reinforcement learning algorithms to create adaptive agents that simulate complex behaviors in a dynamic environment for the Pacman Game as technology demostration for the CS275 - Artificial Life for Computer Graphics and Vision course.
           </p>
           <p>
             &copy; 2024 Siddarth Chalasan, Varun Kumar, Kevin Lee, Yu-Hsin Weng. All rights reserved.
