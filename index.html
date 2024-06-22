@@ -180,17 +180,17 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Approximate Q-Learning Algorithm</h2>
+          <h2 class="title is-3">Proximal Policy Optimization (PPO) Algorithm</h2>
           <div class="content has-text-justified">
             <p>
-              Approximate Q-Learning extends Q-Learning by using function approximation to handle large state spaces. This approach leverages features of the states to approximate the Q-values, making it suitable for complex environments like the Capture The Flag Pacman game.
+              Proximal Policy Optimization (PPO) is a reinforcement learning algorithm that optimizes the policy directly. It strikes a balance between exploration and exploitation by maintaining a probability ratio, which ensures stable and efficient learning. PPO is known for its simplicity and effectiveness in various RL tasks.
             </p>
             <p>
-              The Q-value update rule with function approximation is:
+              The PPO objective function is:
               \[
-              Q(s, a; \theta) \leftarrow Q(s, a; \theta) + \alpha \left[ r + \gamma \max_{a'} Q(s', a'; \theta) - Q(s, a; \theta) \right]
+              L^{CLIP}(\theta) = \hat{\mathbb{E}}_t \left[ \min \left( r_t(\theta) \hat{A}_t, \text{clip}(r_t(\theta), 1 - \epsilon, 1 + \epsilon) \hat{A}_t \right) \right]
               \]
-              where \( \theta \) represents the parameters of the function approximator.
+              where \( r_t(\theta) \) is the probability ratio, \( \hat{A}_t \) is the advantage estimate, and \( \epsilon \) is a hyperparameter that controls the clipping range.
             </p>
           </div>
         </div>
@@ -204,17 +204,17 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Proximal Policy Optimization (PPO) Algorithm</h2>
+          <h2 class="title is-3">Approximate Q-Learning Algorithm</h2>
           <div class="content has-text-justified">
             <p>
-              Proximal Policy Optimization (PPO) is a reinforcement learning algorithm that optimizes the policy directly. It strikes a balance between exploration and exploitation by maintaining a probability ratio, which ensures stable and efficient learning. PPO is known for its simplicity and effectiveness in various RL tasks.
+              Approximate Q-Learning extends Q-Learning by using function approximation to handle large state spaces. This approach leverages features of the states to approximate the Q-values, making it suitable for complex environments like the Capture The Flag Pacman game.
             </p>
             <p>
-              The PPO objective function is:
+              The Q-value update rule with function approximation is:
               \[
-              L^{CLIP}(\theta) = \hat{\mathbb{E}}_t \left[ \min \left( r_t(\theta) \hat{A}_t, \text{clip}(r_t(\theta), 1 - \epsilon, 1 + \epsilon) \hat{A}_t \right) \right]
+              Q(s, a; \theta) \leftarrow Q(s, a; \theta) + \alpha \left[ r + \gamma \max_{a'} Q(s', a'; \theta) - Q(s, a; \theta) \right]
               \]
-              where \( r_t(\theta) \) is the probability ratio, \( \hat{A}_t \) is the advantage estimate, and \( \epsilon \) is a hyperparameter that controls the clipping range.
+              where \( \theta \) represents the parameters of the function approximator.
             </p>
           </div>
         </div>
